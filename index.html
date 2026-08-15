@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopZen — a modern Bangladeshi e-commerce frontend experience.">
+  <title>ShopZen — Modern E-Commerce</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="announcement">
+    <div class="announcement-track">
+      <p>Free delivery on orders over <strong>৳1,500</strong></p>
+      <span>•</span>
+      <p>Easy returns within 3 days</p>
+      <span>•</span>
+      <p>Same day delivery in Dhaka</p>
+      <span>•</span>
+      <p>Free delivery on orders over <strong>৳1,500</strong></p>
+      <span>•</span>
+      <p>Easy returns within 3 days</p>
+      <span>•</span>
+      <p>Same day delivery in Dhaka</p>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="ShopZen home">
+        <span class="logo-mark">S</span>
+        <span>Shop<span>Zen</span></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a class="active" href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#deals">Deals</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn search-toggle" aria-label="Search"><span>⌕</span></button>
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <span>♡</span><b class="count wishlist-count">0</b>
+        </button>
+        <div class="account-wrap">
+          <button class="icon-btn" id="accountBtn" aria-label="Account">
+            <span id="accountIcon">👤</span>
+          </button>
+          <div class="account-menu" id="accountMenu">
+            <p>Signed in as<strong id="accountName">—</strong></p>
+            <button id="ordersBtn">My orders <span>→</span></button>
+            <button id="logoutBtn">Log out</button>
+          </div>
+        </div>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">
+          <span>🛒</span><b class="count cart-count">0</b>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div class="search-panel">
+      <div class="container search-wrap">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search for products, categories..." autocomplete="off">
+        <button id="closeSearch">Esc</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#deals">Deals</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow" id="heroGlow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow hero-in" style="--d:0"><i></i> Everyday shopping, made better</span>
+          <h1 class="hero-in" style="--d:1">Everything you need.<br><em>Delivered with ease.</em></h1>
+          <p class="hero-in" style="--d:2">Discover everyday essentials, fresh picks and lifestyle favorites —
+            thoughtfully curated for modern living.</p>
+          <div class="hero-actions hero-in" style="--d:3">
+            <a href="#shop" class="btn btn-primary">Shop now <span>↗</span></a>
+            <a href="#categories" class="text-link">Explore categories <span>→</span></a>
+          </div>
+          <div class="hero-trust hero-in" style="--d:4">
+            <div class="avatar-stack">
+              <span>NA</span><span>RA</span><span>SM</span><span>+</span>
+            </div>
+            <div><strong class="count-up" data-target="12000" data-suffix="+">0</strong><small>happy shoppers</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-in" style="--d:2" id="heroVisual">
+          <div class="hero-orb"></div>
+          <div class="hero-card hero-card-main">
+            <span class="hero-label">Fresh pick</span>
+            <img src="images/tomato.jpg" alt="Fresh tomatoes">
+            <div class="hero-product-info">
+              <div>
+                <small>Farm selection</small>
+                <strong>Tomato</strong>
+              </div>
+              <b>৳60</b>
+            </div>
+          </div>
+          <div class="floating-card floating-top">
+            <span class="mini-icon">✦</span>
+            <div><strong>Fresh every day</strong><small>Quality checked</small></div>
+          </div>
+          <div class="floating-card floating-bottom">
+            <span class="delivery-icon">↗</span>
+            <div><strong>Fast delivery</strong><small>Same day in Dhaka</small></div>
+          </div>
+          <span class="decor-dot dot-one"></span>
+          <span class="decor-dot dot-two"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Browse by lifestyle</span>
+            <h2>Shop your way.</h2>
+          </div>
+          <a href="#shop" class="text-link">View all <span>→</span></a>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card reveal" data-category="Fresh Produce">
+            <div class="category-image"><img src="images/tomato.jpg" alt="Fresh produce"></div>
+            <strong>Fresh Produce</strong><span>6 items</span>
+          </button>
+          <button class="category-card reveal" data-category="Dairy">
+            <div class="category-image"><img src="images/cow-milk.jpg" alt="Dairy"></div>
+            <strong>Dairy & Eggs</strong><span>6 items</span>
+          </button>
+          <button class="category-card reveal" data-category="Bakery">
+            <div class="category-image"><img src="images/sliced-bread.jpg" alt="Bakery"></div>
+            <strong>Bakery</strong><span>6 items</span>
+          </button>
+          <button class="category-card reveal" data-category="Beverages">
+            <div class="category-image"><img src="images/mango-juice.jpg" alt="Beverages"></div>
+            <strong>Beverages</strong><span>6 items</span>
+          </button>
+          <button class="category-card reveal" data-category="Snacks">
+            <div class="category-image"><img src="images/chanachur.jpg" alt="Snacks"></div>
+            <strong>Snacks</strong><span>6 items</span>
+          </button>
+          <button class="category-card reveal" data-category="Household">
+            <div class="category-image"><img src="images/dish-wash.jpg" alt="Household essentials"></div>
+            <strong>Household</strong><span>6 items</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section" id="shop">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Curated for you</span>
+            <h2>Trending products.</h2>
+          </div>
+          <div class="filter-row">
+            <button class="filter active" data-filter="All">All</button>
+            <button class="filter" data-filter="Fresh Produce">Fresh</button>
+            <button class="filter" data-filter="Dairy">Dairy</button>
+            <button class="filter" data-filter="Bakery">Bakery</button>
+            <button class="filter" data-filter="Beverages">Beverages</button>
+            <button class="filter" data-filter="Snacks">Snacks</button>
+            <button class="filter" data-filter="Household">Household</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState">No products found. Try another search.</div>
+      </div>
+    </section>
+
+    <section class="deal section" id="deals">
+      <div class="container">
+        <div class="deal-banner reveal">
+          <div class="deal-copy">
+            <span class="eyebrow">Weekend special</span>
+            <h2>Fresh deals.<br><span>Better prices.</span></h2>
+            <p>Save up to 30% on selected everyday essentials. Limited time offers, made for your next basket.</p>
+            <button class="btn btn-light" id="dealBtn">Shop the deals <span>↗</span></button>
+          </div>
+          <div class="deal-art">
+            <div class="sale-badge"><strong>30%</strong><span>OFF</span></div>
+            <img src="images/mango-juice.jpg" alt="Weekend deal">
+            <div class="deal-sticker">THIS<br>WEEK</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section">
+      <div class="container">
+        <div class="benefit-grid">
+          <div class="benefit reveal"><span>01</span>
+            <div><strong>Fast delivery</strong>
+              <p>Reliable delivery to your doorstep.</p>
+            </div>
+          </div>
+          <div class="benefit reveal"><span>02</span>
+            <div><strong>Quality first</strong>
+              <p>Every product is carefully selected.</p>
+            </div>
+          </div>
+          <div class="benefit reveal"><span>03</span>
+            <div><strong>Secure payment</strong>
+              <p>Simple and secure checkout experience.</p>
+            </div>
+          </div>
+          <div class="benefit reveal"><span>04</span>
+            <div><strong>Easy returns</strong>
+              <p>3 days return support on eligible items.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section">
+      <div class="container newsletter-inner reveal">
+        <div><span class="eyebrow">Stay in the loop</span>
+          <h2>Good things, straight to your inbox.</h2>
+        </div>
+        <form id="newsletterForm"><input type="email" placeholder="Your email address" required><button
+            class="btn btn-primary">Subscribe <span>→</span></button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="logo" href="#home"><span
+            class="logo-mark">S</span><span>Shop<span>Zen</span></span></a>
+        <p>A thoughtful e-commerce experience built for everyday shopping in Bangladesh.</p>
+      </div>
+      <div>
+        <h4>Shop</h4><a href="#shop">All products</a><a href="#categories">Categories</a><a href="#deals">Deals</a>
+      </div>
+      <div>
+        <h4>Company</h4><a href="#home">About us</a><a href="#home">Careers</a><a href="#home">Contact</a>
+      </div>
+      <div>
+        <h4>Support</h4><a href="#home">Help center</a><a href="#home">Delivery info</a><a href="#home">Returns</a>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 ShopZen</span><span>Made with care ✦</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <div><span class="eyebrow">Your basket</span>
+        <h3>Shopping cart</h3>
+      </div><button class="close-drawer" id="closeCart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <div>🛒</div>
+      <h4>Your cart is empty</h4>
+      <p>Add something you love and it will appear here.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div><span>Subtotal</span><strong id="subtotal">৳0</strong></div>
+      <small>Delivery fee calculated at checkout.</small>
+      <button class="btn btn-primary checkout-btn">Proceed to checkout <span>→</span></button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"><span>✓</span>
+    <p>Added to your cart</p>
+  </div>
+
+  <div class="quick-modal" id="quickModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+      <div class="modal-content"><span class="eyebrow" id="modalCategory"></span>
+        <h2 id="modalName"></h2>
+        <div class="modal-rating" id="modalRating"></div>
+        <p id="modalDescription"></p>
+        <div class="modal-buy"><strong id="modalPrice"></strong><button class="btn btn-primary" id="modalAdd">Add to
+            cart <span>+</span></button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth: login / signup -->
+  <div class="auth-modal" id="authModal">
+    <div class="auth-card">
+      <button class="modal-close" id="closeAuth">×</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log in</button>
+        <button class="auth-tab" data-tab="signup">Sign up</button>
+      </div>
+
+      <form class="auth-form active" id="loginForm" data-panel="login">
+        <span class="eyebrow">Welcome back</span>
+        <h3>Log in to ShopZen</h3>
+        <label>Email address<input type="email" id="loginEmail" required autocomplete="email"></label>
+        <label>Password<input type="password" id="loginPassword" required minlength="4"
+            autocomplete="current-password"></label>
+        <p class="auth-error" id="loginError"></p>
+        <button class="btn btn-primary" type="submit">Log in <span>→</span></button>
+        <p class="auth-hint">New here? <button type="button" class="link-btn" data-switch="signup">Create an
+            account</button></p>
+      </form>
+
+      <form class="auth-form" id="signupForm" data-panel="signup">
+        <span class="eyebrow">Join ShopZen</span>
+        <h3>Create your account</h3>
+        <label>Full name<input type="text" id="signupName" required autocomplete="name"></label>
+        <label>Email address<input type="email" id="signupEmail" required autocomplete="email"></label>
+        <label>Password<input type="password" id="signupPassword" required minlength="4"
+            autocomplete="new-password"></label>
+        <p class="auth-error" id="signupError"></p>
+        <button class="btn btn-primary" type="submit">Create account <span>→</span></button>
+        <p class="auth-hint">Already have an account? <button type="button" class="link-btn" data-switch="login">Log
+            in</button></p>
+      </form>
+
+      <p class="auth-note">Demo login — your info stays only in this browser.</p>
+    </div>
+  </div>
+
+  <!-- Orders history -->
+  <div class="auth-modal" id="ordersModal">
+    <div class="auth-card orders-card">
+      <button class="modal-close" id="closeOrders">×</button>
+      <span class="eyebrow">Order history</span>
+      <h3>My orders</h3>
+      <div class="orders-list" id="ordersList"></div>
+      <div class="orders-empty" id="ordersEmpty">
+        <div>📦</div>
+        <h4>No orders yet</h4>
+        <p>Orders you place will show up here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout flow -->
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-card">
+      <button class="modal-close" id="closeCheckout">×</button>
+
+      <div class="checkout-steps" id="checkoutSteps">
+        <div class="c-step active" data-step="1"><span>1</span>Shipping</div>
+        <div class="c-step" data-step="2"><span>2</span>Payment</div>
+        <div class="c-step" data-step="3"><span>3</span>Review</div>
+      </div>
+
+      <div class="checkout-panel active" data-panel="1">
+        <h3>Shipping details</h3>
+        <div class="form-grid">
+          <label>Full name<input id="shipName" type="text" required></label>
+          <label>Phone number<input id="shipPhone" type="tel" required placeholder="01XXXXXXXXX"></label>
+          <label class="full">Address<input id="shipAddress" type="text" required
+              placeholder="House, road, area"></label>
+          <label>City<input id="shipCity" type="text" required placeholder="Jessore"></label>
+          <label>Postal code<input id="shipZip" type="text" placeholder="7400"></label>
+        </div>
+        <p class="auth-error" id="shipError"></p>
+        <div class="checkout-actions">
+          <span></span>
+          <button class="btn btn-primary" id="toPayment">Continue to payment <span>→</span></button>
+        </div>
+      </div>
+
+      <div class="checkout-panel" data-panel="2">
+        <h3>Payment method</h3>
+        <div class="payment-options">
+          <label class="pay-option active"><input type="radio" name="pay" value="cod" checked><span
+              class="pay-radio"></span><span class="pay-label"><strong>Cash on delivery</strong><small>Pay when your
+                order arrives</small></span></label>
+          <label class="pay-option"><input type="radio" name="pay" value="card"><span class="pay-radio"></span><span
+              class="pay-label"><strong>Credit / Debit card</strong><small>Visa, Mastercard, and
+                more</small></span></label>
+        </div>
+        <div class="form-grid card-fields" id="cardFields">
+          <label class="full">Card number<input id="cardNumber" type="text" placeholder="1234 5678 9012 3456"
+              maxlength="19"></label>
+          <label>Expiry<input id="cardExpiry" type="text" placeholder="MM/YY" maxlength="5"></label>
+          <label>CVC<input id="cardCvc" type="text" placeholder="123" maxlength="3"></label>
+        </div>
+        <p class="auth-error" id="paymentError"></p>
+        <div class="checkout-actions">
+          <button class="btn btn-ghost" id="toShippingBack">← Back</button>
+          <button class="btn btn-primary" id="toReview">Review order <span>→</span></button>
+        </div>
+      </div>
+
+      <div class="checkout-panel" data-panel="3">
+        <h3>Review your order</h3>
+        <div class="review-items" id="reviewItems"></div>
+        <div class="review-summary">
+          <div><span>Subtotal</span><strong id="reviewSubtotal">৳0</strong></div>
+          <div><span>Delivery fee</span><strong id="reviewDelivery">৳60</strong></div>
+          <div class="review-total"><span>Total</span><strong id="reviewTotal">৳0</strong></div>
+        </div>
+        <div class="checkout-actions">
+          <button class="btn btn-ghost" id="toPaymentBack">← Back</button>
+          <button class="btn btn-primary" id="placeOrder">Place order <span>✓</span></button>
+        </div>
+      </div>
+
+      <div class="checkout-panel" data-panel="success">
+        <div class="order-success">
+          <div class="success-check"><span>✓</span></div>
+          <h3>Order confirmed!</h3>
+          <p>Your order <strong id="orderId"></strong> has been placed. We'll deliver it soon.</p>
+          <button class="btn btn-primary" id="backToShop">Continue shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
