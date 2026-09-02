@@ -2,6 +2,7 @@
 
 A modern, responsive e-commerce frontend built for a Bangladeshi grocery shopping experience using HTML, CSS, and Vanilla JavaScript.
 
+Live link: https://nafisaalicodes.github.io/ShopZen-E-Commerce-Frontend-Project/
 ## Features
 
 *  36 products across 6 grocery categories
